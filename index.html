@@ -5,108 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rádio Jardim</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@1,400;1,700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* Reset and Global Styles */
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
             color: #333;
-            background: #f9f9f9;
-            overflow-x: hidden;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
+            background-color: #f9f6f1;
+            line-height: 1.8;
         }
         h1, h2, h3 {
-            margin-bottom: 1rem;
-            color: #2c3e50;
-        }
-        p {
-            margin-bottom: 1rem;
-            color: #555;
+            font-family: 'Cardo', serif;
+            color: #2b2b2b;
         }
 
-        /* Header */
+        /* Header Section */
         header {
-            background: linear-gradient(135deg, #1abc9c, #16a085);
+            background: url('https://source.unsplash.com/1600x900/?garden,nature') no-repeat center center/cover;
             color: #fff;
             text-align: center;
-            padding: 2rem 1rem;
+            padding: 4rem 1rem;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
         }
         header h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
+            font-size: 3rem;
+            z-index: 2;
+            position: relative;
         }
-        nav {
-            margin-top: 1rem;
+        header p {
+            z-index: 2;
+            position: relative;
+            font-size: 1.2rem;
         }
-        nav a {
-            margin: 0 15px;
-            font-weight: 600;
+        header nav {
+            position: absolute;
+            bottom: 10%;
+            width: 100%;
+            z-index: 2;
+        }
+        header nav a {
+            margin: 0 10px;
             color: #fff;
-            text-transform: uppercase;
-            font-size: 0.9rem;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
         }
 
-        /* Sections */
+        /* Section Styling */
         section {
             padding: 3rem 1rem;
             text-align: center;
         }
-        section:nth-child(even) {
-            background: #f4f4f4;
+        .about {
+            background: #f5ede3;
         }
-        .container {
-            max-width: 900px;
-            margin: auto;
+        .listen, .participate {
+            background: #dbe8d4;
         }
+        .events {
+            background: #ece8f6;
+        }
+
+        section h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        section p {
+            max-width: 600px;
+            margin: 0 auto 1.5rem auto;
+            font-size: 1rem;
+            color: #444;
+        }
+
+        /* Buttons */
         button {
-            background: #1abc9c;
+            background: #4caf50;
             color: #fff;
             border: none;
             padding: 10px 20px;
-            border-radius: 50px;
+            border-radius: 25px;
             cursor: pointer;
+            font-size: 1rem;
             transition: background 0.3s;
         }
         button:hover {
-            background: #16a085;
-        }
-
-        /* Interactive Elements */
-        .listen a {
-            display: inline-block;
-            margin: 0 10px;
-            font-size: 1.2rem;
-            color: #1abc9c;
-            transition: color 0.3s;
-        }
-        .listen a:hover {
-            color: #16a085;
+            background: #45a049;
         }
 
         /* Footer */
         footer {
-            background: #2c3e50;
+            background: #333;
             color: #fff;
+            padding: 2rem;
             text-align: center;
-            padding: 1rem;
         }
         footer p {
             margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #4caf50;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Rádio Jardim</h1>
+        <p>An epicurean journey through soundscapes and stories.</p>
         <nav>
             <a href="#about">About</a>
             <a href="#listen">Listen</a>
@@ -116,57 +137,35 @@
         </nav>
     </header>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Rádio Jardim</h2>
-            <p>An epicurean journey through soundscapes and stories, connecting communities through auditory exploration.</p>
-        </div>
+    <section id="about" class="about">
+        <h2>About Rádio Jardim</h2>
+        <p>Rádio Jardim is a mobile community radio exploring soundscapes and stories to unite listeners through auditory experiences. Join us in celebrating the power of sound!</p>
     </section>
 
     <section id="listen" class="listen">
-        <div class="container">
-            <h2>Listen</h2>
-            <p>Catch our latest broadcasts or explore past episodes:</p>
-            <a href="#">Spotify</a>
-            <a href="#">SoundCloud</a>
-            <a href="#">YouTube</a>
-        </div>
+        <h2>Listen Live</h2>
+        <p>Experience a curated selection of soundscapes, music, and community stories. Tune in for our monthly live broadcasts.</p>
+        <button>Listen Now</button>
     </section>
 
-    <section id="participate">
-        <div class="container">
-            <h2>Participate</h2>
-            <p>Record your garden or share your music. Submit your contributions to be part of the Rádio Jardim journey!</p>
-            <button>Submit Your Sound</button>
-        </div>
+    <section id="participate" class="participate">
+        <h2>Participate</h2>
+        <p>Be part of Rádio Jardim by sharing your soundscapes or music. Record the sounds of your garden or curate a playlist for our community.</p>
+        <button>Submit Your Sounds</button>
     </section>
 
-    <section id="events">
-        <div class="container">
-            <h2>Events</h2>
-            <p>Upcoming Events:</p>
-            <ul>
-                <li><strong>23 Jan 2025</strong>: "Inner Gardens" Live Broadcast</li>
-                <li><strong>22 Feb 2025</strong>: "Ataraxia" Soundscape Event</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+    <section id="events" class="events">
+        <h2>Upcoming Events</h2>
+        <p>Join us at unique venues each month as we explore soundscapes and stories through live broadcasts.</p>
+        <ul>
+            <li>23 Jan 2025: Inner Gardens</li>
+            <li>22 Feb 2025: Ataraxia Soundscape</li>
+        </ul>
     </section>
 
     <footer>
         <p>Rádio Jardim - Always Listening</p>
-        <p><a href="mailto:contact@radiojardim.net">contact@radiojardim.net</a></p>
+        <p>Contact us: <a href="mailto:contact@radiojardim.net">contact@radiojardim.net</a></p>
     </footer>
 </body>
 </html>
