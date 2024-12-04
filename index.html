@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rádio Jardim</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, p, ul, li, a, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* Header */
+        header {
+            background: #3a5a40;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2rem;
+        }
+        nav {
+            margin: 1rem 0;
+        }
+        nav a {
+            margin: 0 10px;
+            color: #fff;
+            font-weight: bold;
+        }
+        /* Sections */
+        section {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .about, .listen, .participate, .events, .contact {
+            background: #f0e7db;
+            border-radius: 8px;
+            margin: 1rem auto;
+            max-width: 800px;
+            padding: 2rem;
+        }
+        .about h2, .listen h2, .participate h2, .events h2, .contact h2 {
+            margin-bottom: 1rem;
+        }
+        .listen button, .participate button {
+            background: #3a5a40;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /* Events Section */
+        .events ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        .events li {
+            margin: 0.5rem 0;
+        }
+        /* Contact Form */
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact input, .contact textarea, .contact button {
+            width: 80%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact button {
+            background: #3a5a40;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+            margin-top: 1rem;
+        }
+        footer a {
+            color: #9ae6b4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rádio Jardim</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#listen">Listen</a>
+            <a href="#participate">Participate</a>
+            <a href="#events">Events</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Rádio Jardim</h2>
+        <p>An epicurean journey through soundscapes and stories, connecting communities through auditory exploration.</p>
+    </section>
+
+    <section id="listen" class="listen">
+        <h2>Listen</h2>
+        <p>Catch our latest broadcasts here or explore past episodes.</p>
+        <button>Listen Live</button>
+        <p>
+            <a href="https://spotify.com" target="_blank">Spotify</a> | 
+            <a href="https://soundcloud.com" target="_blank">SoundCloud</a> | 
+            <a href="https://youtube.com" target="_blank">YouTube</a>
+        </p>
+    </section>
+
+    <section id="participate" class="participate">
+        <h2>Participate</h2>
+        <p>Record your garden or share your music! Submit your contributions below.</p>
+        <button>Submit Your Sound</button>
+    </section>
+
+    <section id="events" class="events">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li>23 Jan 2025: "Inner Gardens" Live Broadcast</li>
+            <li>22 Feb 2025: "Ataraxia" Soundscape Event</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Rádio Jardim - Always Listening</p>
+        <p><a href="mailto:contact@radiojardim.net">contact@radiojardim.net</a></p>
+    </footer>
+</body>
+</html>
